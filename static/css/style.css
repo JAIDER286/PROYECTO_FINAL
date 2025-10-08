@@ -1,0 +1,252 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: #eeeeee;
+    overflow: hidden; /* 🚀 evita que toda la página tenga scroll */
+
+    /* Aquí va todo el fondo */
+    background: 
+        linear-gradient(to right,#176814, #165a19,  #176814),
+        url("/static/img/garras.png"),
+        url("/static/img/garras.png");
+
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center, left top, right bottom; 
+    background-size: cover, 200px auto, 200px auto; 
+}
+
+/* Cabecera */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(51, 50, 50, 0.322);
+    padding: 15px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(167, 55, 55, 0.3);
+}
+
+/* RELOJ ZONA SUPERIOR */
+#hora {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px;
+    height: calc(100vh - 120px); /* 🚀 ajusta el área sin scroll global */
+}
+
+/* Cuadro pequeño con el muñeco */
+.avatar-box {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+    background: #2a912a;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-box img {
+    width: 200px;   /* puedes ajustar a lo que quieras */
+    height: 200px;
+    border-radius: 50%; /* lo hace circular */
+    object-fit: cover;  /* recorta bien la imagen */
+}
+
+
+/* Cuadro grande de conversación */
+.chat-container {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;   /* 🚀 scroll solo aquí */
+    background: #27b627;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/* Personalización del scroll */
+.chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: #1c971c;
+    border-radius: 10px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Mensajes */
+.mensaje {
+    background: #15b32a;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin: 8px 0;
+    max-width: 70%;
+}
+
+/* Input de chat */
+.chat-input {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.chat-input button {
+    background: #30b31f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ESTILO DE LA CAJA DE CHAT */
+.mensaje {
+    max-width: 70%;
+    margin: 10px 0;
+    padding: 10px 15px;   /* ← aquí faltaba el ; */
+    border-radius: 20px;
+    animation: aparecer 0.3s ease-in-out;
+}
+
+
+.usuario {
+    background: linear-gradient(135deg, #34d058, #28a745);
+    color: white;
+    align-self: flex-end;
+    border-radius: 20px 20px 0 20px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.bot {
+    background: linear-gradient(135deg, #2d572c, #1b3d1a);
+    color: #f1f1f1;
+    align-self: flex-start;
+    border-radius: 20px 20px 20px 0;
+    padding: 10px 15px;
+    margin: 5px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* FORMATO  */
+form {
+    display: flex;
+    padding: 15px;
+    background: rgba(169, 144, 86, 0.9);
+}
+
+form input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #588f51;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    background: #2dac38;
+    color: rgb(255, 255, 255);
+}
+form input::placeholder {
+    color: #a6f5a6;
+}
+
+form button {
+    background: #22be3c;
+    color: rgba(255, 255, 255, 0.671);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #000000;
+}
+
+/* BOTON DE OSCURO Y CLARO */
+.modo-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: rgb(42, 156, 38);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Tema oscuro */
+body.oscuro {
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: white;
+}
+
+
+
+body.oscuro .bot {
+    background: #334155;
+    color: rgb(250, 250, 250);
+}
+
+body.oscuro form {
+    background: rgba(0,0,0,0.6);
+}
+
+body.oscuro form input {
+    border: 2px solid #03357a;
+    background: #1e293b;
+    color: rgb(247, 246, 246);
+}
+
+body.oscuro form button {
+    background: #000000;
+}

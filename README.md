@@ -7,3 +7,7 @@ TEMAS DE NUESTRO ASISTENTE:
 3. Climas
 4. Chistes
 5. Frases que inspiren en tu dia a dia 
+
+Todo esto lo tengo pensado hacer en pagina web donde en la ventana hay.
+1. Cuadrito donde nos muestra en alguna esquina la hora en tiempo real.
+2. 

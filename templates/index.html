@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEONIXX</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- ZONA SUPERIOR -->
+    <header>
+        <div id="hora"></div>
+        <h1> BioCAPTUS</h1>
+        <button class="modo-btn" onclick="toggleModo()">🌙</button>
+    </header>
+
+    <div class="chat-wrapper">
+        <!-- CUADRO PEQUEÑO ARRIBA -->
+        <div class="avatar-box">
+            <img src="/static/img/captus.png" alt="Muñeco">
+        </div>
+
+        <!-- CUADRO GRANDE ABAJO -->
+        <div class="chat-container">
+            {% for tipo, mensaje in historial %}
+                <div class="mensaje {{ tipo }}">
+                    {{ mensaje|safe }}
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Input para escribir -->
+        <form class="chat-input" method="POST" action="/ask">
+            <input type="text" name="message" placeholder="Escribe algo..." required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        /* RELOJ EN VIVO */
+        function actualizarHora() {
+            let ahora = new Date();
+            let horas = String(ahora.getHours()).padStart(2, '0');
+            let minutos = String(ahora.getMinutes()).padStart(2, '0');
+            let segundos = String(ahora.getSeconds()).padStart(2, '0');
+            document.getElementById("hora").innerText = `${horas}:${minutos}:${segundos}`;
+        }
+        setInterval(actualizarHora, 1000);
+        actualizarHora();
+
+        /* CAMBIAR DE MODO (oscuro/claro) */
+        function toggleModo() {
+            document.body.classList.toggle("oscuro");
+        }
+    </script>
+</body>
+</html>
+
