@@ -25,7 +25,7 @@ body {
     background-position: center, left top, right bottom; 
     background-size: cover, 200px auto, 200px auto; 
 }
-
+ 
 /* Cabecera */
 header {
     display: flex;
