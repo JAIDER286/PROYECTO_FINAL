@@ -31,11 +31,21 @@ historial = []
 
 # --- FUNCIONES DE BOT --- #
 def menu_opciones():
-    return ("\nOpciones disponibles:\n"
-            "1. ¿Qué es el cambio climático?\n"
-            "2. ¿Cómo podemos ayudar?\n"
-            "3. Consecuencias principales\n")
+    return (
+        "Opciones disponibles:<br>"
+        "1. ¿Qué es el cambio climático?<br>"
+        "2. Causas del cambio climático<br>"
+        "3. Consecuencias del cambio climático<br>"
+        "4. Cómo podemos prevenirlo<br>"
+        "5. Qué son los gases efecto invernadero<br>"
+        "6. Qué efectos tiene en los polos<br>"
+        "7. Como afecta la agricultura<br>"
+        "8. Que pasa con lso oceanos<br>"
+        "9. Como afecta a las ciudades<br>"
+        "10. Datos curiosos o interesantes"
+    )
 
+    
 def procesar_mensaje(texto):
     texto = texto.lower().strip()
 
@@ -44,25 +54,67 @@ def procesar_mensaje(texto):
                 + menu_opciones())
     
     elif texto == "1":
-        return ("🌍 El cambio climático es la variación de las condiciones del clima a largo plazo.\n\n"
+        return ("🌍 El cambio climatico es la alteracion prolongada del clima terrestre debido a las actividades humanas que emites gases efecto invernadero. Estos gaese atrapan el calor y elevan la temperatira del planeta. Aunque el clima siempre ha cambiado el ritmo actual es alarmante y esta relacionado con la contaminacion y la desforestacion.\n\n"
                 "📄 Documento explicativo (ONU): <a href='https://www.un.org/es/climatechange/what-is-climate-change' target='_blank'>Ver aquí</a><br>"
                 "🎥 Video corto: <a href='https://www.youtube.com/watch?v=EtW2rrLHs08' target='_blank'>Ver video</a><br>"
-                "📚 Guía completa (PDF): <a href='https://unfccc.int/resource/docs/publications/cc_guide.pdf' target='_blank'>Descargar</a><br><br>"
-                + menu_opciones())
+        )
     
     elif texto == "2":
-        return ("✅ Podemos ayudar reduciendo el consumo de energía, reciclando y usando transporte sostenible.\n\n"
+        return ("✅ Entre las principales causas estan la quema de combustibles fosiles, la desforestacion y las actividades industriales. Estas acciones liberan gases como el CO₂ y el metano, que instensifican el efecto inernadero. La agricultura y la ganaderia tambien contribuyen al calentamiento global, liberando gases muy potentes.\n\n"
                 "📄 Artículo: <a href='https://www.nationalgeographic.com/environment/article/how-to-help' target='_blank'>Leer aquí</a><br>"
                 "🎥 Video: <a href='https://www.youtube.com/watch?v=V5w1nqG7KqY' target='_blank'>Ver video</a><br>"
-                "📚 Guía práctica (PDF): <a href='https://ec.europa.eu/clima/sites/clima/files/docs/0108/guide_es.pdf' target='_blank'>Descargar</a><br><br>"
-                + menu_opciones())
+        )
     
     elif texto == "3":
-        return ("⚠️ Consecuencias del cambio climático: aumento de temperaturas, deshielo de glaciares y fenómenos extremos.\n\n"
+        return ("⚠️ Los efectos del cambio climatico incluyen el derretimiento de los glaciales, aumento del nivel del mar, incendios forestales y fenomentos extremos. Estas consecuencias afectan la vida humanan, los animales y los ecosistemas del planeta. Cada año se intensifican los desastres naturales y se pierden muchos habitas de animales.\n\n"
                 "📄 Informe IPCC: <a href='https://www.ipcc.ch/' target='_blank'>Leer informe</a><br>"
                 "🎥 Video explicativo: <a href='https://www.youtube.com/watch?v=H1t2t5t0FJk' target='_blank'>Ver video</a><br>"
-                "📚 Documento PDF (impactos en Latinoamérica): <a href='https://repositorio.cepal.org/bitstream/handle/11362/37312/S1420651_es.pdf' target='_blank'>Descargar</a><br><br>"
-                + menu_opciones())
+        )
+    
+    elif texto == "4":
+        return ("🌱 La prevencion comienza con el uso de energias limpias, como la solar y la eolica, y los cambios de nuestros habitos. Reducir el consumo de plasticos, reciclar y cuidar el agua son acciones cotidianas que marcan la diferencia. Tambien es importante apoyar politicas que protejan el medio ambiente.\n\n"
+                "📄 Artículo: <a href='https://www.wwf.org.mx/que_hacemos/cambio_climatico/' target='_blank'>Leer aquí</a><br>"
+                "🎥 Video: <a href='https://www.youtube.com/watch?v=V5w1nqG7KqY' target='_blank'>Ver video</a><br>"
+        )
+    
+    elif texto == "5":
+        return ("🌫️ Son gases naturales que ayudan a mantener la Tierra calida, pero en exceso causan calentamiento global. Entre los mas importantes estan el dioxido de carbono, el metano y el oxido nitroso. Su aunmento descontrolado crea un desequilibrio climatico.\n\n"
+                "📄 Artículo: <a href='https://www.epa.gov/espanol/ghgemissions/que-son-los-gases-de-efecto-invernadero' target='_blank'>Leer aquí</a><br>"
+                "🎥 Video: <a href='https://www.youtube.com/watch?v=H1t2t5t0FJk' target='_blank'>Ver video</a><br>"
+        )
+    
+    elif texto == "6":
+        return ("❄️ Los polos se derriten rapidamente,lo que eleva el nivel del mar y amenaza especies como los son los osos polares y los pinguinos. Ademas, cambia las corrientoes oceanicas, afectando el clima global. Es uno de los impactos mas visibles y preocupantes del calentamiento global\n\n"
+                "📄 Artículo: <a href='https://www.nationalgeographic.com/environment/article/poles' target='_blank'>Leer aquí</a><br>"
+                "🎥 Video: <a href='https://www.youtube.com/watch?v=J9bZx1k8b0Y' target='_blank'>Ver video</a><br>"
+        )
+    
+    elif texto == "7":
+        return ("🌾 El cambio climatico esta modificando los patrones de lluvia y aumentando las sequias, lo que se complica la produccion de alimentos. Los cultivos se enfrentan a plagas nuevas, el suelo pierde nutrientes y las estaciones se vuelven menos predecibles. En algunas zonas, las cosechas se reducen drasticamente, afectando la economia y la seguridad alimentaria. Por eso, se impulsa la agricultura sostenible, con tecnicas que protegen el suelo y reducen el uso de quimicos dañinos.\n\n"
+                "📄 Artículo: <a href='https://www.fao.org/climate-change/en/' target='_blank'>Leer aquí</a><br>"
+                "🎥 Video: <a href='https://www.youtube.com/watch?v=Z4z2kX9b6pY' target='_blank'>Ver video</a><br>"
+        )
+    
+    elif texto == "8":
+        return ("🌊 Los océanos absorben gran parte del claor y de CO₂ generados por el cambio climatico. Esto causa su acidificacion, afectando la vida marina, especialmente los corales, moluscos y peces. Ademas, el aumento de temperatura provoca el blanqueamiento de lso arrecifes y alteera las corrientes oceánicas. Si los océanos se desequilibran, se altera toda la cadena alimenticia marina y, por tanto, la vida humana que depende de ella.\n\n"
+                "📄 Artículo: <a href='https://www.nationalgeographic.com/environment/article/oceans' target='_blank'>Leer aquí</a><br>"
+                "🎥 Video: <a href='https://www.youtube.com/watch?v=1f4k7b8k8b8' target='_blank'>Ver video</a><br>"
+                )
+    
+    elif texto == "9":
+        return ("🏙️ Las ciudades son responsables de una gran parte de emisiones de gases efecto invernadero, y tambien sufren sus consecuencias. Las olas de claor son cada vez mas intensas, el aire se vuelve mas contaminado y las lluvias torrenciales pueden causar inundaciones. Ademas, el calor ha atrapado por el concreto y los edificios crea el llamado (efecto isla de calor). Las ciudades deben adaptarse con mas zonas verdes, techos solares  y transporte limpio para ser mas sostenibles.\n\n"
+                "📄 Artículo: <a href='https://www.un.org/en/climatechange/what-is-climate-change' target='_blank'>Leer aquí</a><br>"
+                "🎥 Video: <a href='https://www.youtube.com/watch?v=V5w1nqG7KqY' target='_blank'>Ver video</a><br>"
+        )
+    
+    elif texto == "10":
+        return ("🌟 Datos curiosos sobre el cambio climático:\n"
+                "- El 2020 fue uno de los años más cálidos registrados.\n"
+                "- Los océanos absorben alrededor del 30% del CO2 emitido por actividades humanas.\n"
+                "- La deforestación contribuye significativamente a las emisiones de GEI.\n\n"
+                "📄 Artículo: <a href='https://www.nationalgeographic.com/environment/article/10-facts-about-climate-change' target='_blank'>Leer aquí</a><br>"
+                "🎥 Video: <a href='https://www.youtube.com/watch?v=EtW2rrLHs08' target='_blank'>Ver video</a><br>"
+        )
     
     else:
         return "Por favor escribe 'hola' para comenzar o elige una opción válida (1, 2 o 3)."
