@@ -76,7 +76,7 @@ header h1 {
 }
 
 .avatar-box img {
-    width: 200px;   /* puedes ajustar a lo que quieras */
+    width: 250px;   /* puedes ajustar a lo que quieras */
     height: 200px;
     border-radius: 50%; /* lo hace circular */
     object-fit: cover;  /* recorta bien la imagen */
@@ -89,7 +89,7 @@ header h1 {
     width: 100%;
     padding: 20px;
     overflow-y: auto;   /* 🚀 scroll solo aquí */
-    background: #27b627;
+    background: #60b65d;
     border-radius: 15px;
     margin-bottom: 10px;
 }
@@ -100,7 +100,7 @@ header h1 {
 }
 
 .chat-container::-webkit-scrollbar-thumb {
-    background: #1c971c;
+    background: #0f520f;
     border-radius: 10px;
 }
 
@@ -110,7 +110,7 @@ header h1 {
 
 /* Mensajes */
 .mensaje {
-    background: #15b32a;
+    background: #60b65d;
     padding: 10px 15px;
     border-radius: 15px;
     margin: 8px 0;
@@ -133,7 +133,7 @@ header h1 {
 }
 
 .chat-input button {
-    background: #30b31f;
+    background: #60b65d;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -152,9 +152,9 @@ header h1 {
 
 
 .usuario {
-    background: linear-gradient(135deg, #34d058, #28a745);
+    background: linear-gradient(135deg, #45c959, #0f9b27);
     color: white;
-    align-self: flex-end;
+    align-self: flex-start;
     border-radius: 20px 20px 0 20px;
     padding: 10px 15px;
     margin: 5px 0;
@@ -162,9 +162,9 @@ header h1 {
 }
 
 .bot {
-    background: linear-gradient(135deg, #2d572c, #1b3d1a);
+    background: linear-gradient(135deg, #3f943e, #0d4d0c);
     color: #f1f1f1;
-    align-self: flex-start;
+    align-self: flex-end;
     border-radius: 20px 20px 20px 0;
     padding: 10px 15px;
     margin: 5px 0;
@@ -180,17 +180,17 @@ header h1 {
 form {
     display: flex;
     padding: 15px;
-    background: rgba(169, 144, 86, 0.9);
+    background: #176814, #165a19,  #176814;
 }
 
 form input {
     flex: 1;
     padding: 10px;
-    border: 2px solid #588f51;
+    border: 2px solid #60b65d;
     border-radius: 10px;
     font-size: 16px;
     margin-right: 10px;
-    background: #2dac38;
+    background: #60b65d;
     color: rgb(255, 255, 255);
 }
 form input::placeholder {
@@ -198,7 +198,7 @@ form input::placeholder {
 }
 
 form button {
-    background: #22be3c;
+    background: #c2c9c1;
     color: rgba(255, 255, 255, 0.671);
     border: none;
     padding: 10px 20px;
